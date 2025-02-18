@@ -158,7 +158,7 @@ class Rasterizer:
 
             # compute radius, by finding eigenvalues of 2d covariance
             # transfrom point from NDC to Pixel
-            mid = 0.5 * (cov[0] + cov[1])
+            mid = 0.5 * (cov[0] + cov[2])
             lambda1 = mid + sqrt(max(0.1, mid * mid - det))
             lambda2 = mid - sqrt(max(0.1, mid * mid - det))
             my_radius = ceil(3 * sqrt(max(lambda1, lambda2)))
